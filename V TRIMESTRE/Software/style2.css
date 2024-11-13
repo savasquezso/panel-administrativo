@@ -1,0 +1,196 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+.dashboard {
+    background: white;
+    border-radius: 24px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 80px 1fr 300px;
+    gap: 20px;
+    margin: 0 auto;
+    min-height: 600px;
+    /*max-width: 1200px;*/
+}
+
+
+.sidebar {
+    background: #6b4de6;
+    border-radius: 16px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.sidebar-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar {
+    background: #f5f6f8;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 300px;
+}
+
+
+.stats-container {
+    background: #6b4de6;
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+}
+
+.stats-header  {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stats-header select {
+    border-radius: 8px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.activity-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: #f0f0f0;
+    border-radius: 2px;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #4CAF50;
+    border-radius: 2px;
+}
+
+
+.right-sidebar {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.friends-list {
+    margin-top: 20px;
+}
+
+.friend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.friend-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f0f0;
+}
+
+
+.graph {
+    height: 150px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.graph-line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #ff69b4;
+    stroke-width: 2;
+}
+
+.map-container {
+    margin-top: 20px;
+    background: #f5f6f8;
+    border-radius: 16px;
+    height: 200px;
+    position: relative;
+}
+
+
+.earnings-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.earning-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    color: black; /* Ajusta el color según tu preferencia */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+

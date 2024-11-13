@@ -1,0 +1,149 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruver</title>
+    <link rel="stylesheet" href="style2.css">
+    </head>
+    <body>
+        <div class="dashboard">
+          
+            <div class="sidebar">
+                <div class="sidebar-icon">🏠</div>
+                <div class="sidebar-icon">📊</div>
+                <div class="sidebar-icon">📅</div>
+                <div class="sidebar-icon">⚙️</div>
+            </div>
+    
+           
+            <div class="main-content">
+                <div class="header">
+                    <h1>Dashboard</h1>
+                    <input type="text" class="search-bar" placeholder="Buscar...">
+                </div>
+    
+             
+                <div class="stats-container">
+                    <div class="stats-header">
+                        <h2>Resumen Financiero</h2>
+                        <select>
+                            <option>Mensual</option>
+                            <option>Semanal</option>
+                            <option>Diario</option>
+                        </select>
+                    </div>
+                    <div class="graph">
+                        <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <path d="M0,50 Q25,20 50,50 T100,50" class="graph-line"/>
+                        </svg>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>748 Hr</h3>
+                            <p>Tiempo Total</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>9,178</h3>
+                            <p>Abril</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>9,200</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="earnings-container">
+                    <div class="earning-card">Ganancias del Día</div>
+                    <div class="earning-card">Ganancias del Mes</div>
+                    <div class="earning-card">Ganancias de la Semana</div>
+                </div>
+                
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <h3></h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 45%"></div>
+                        </div>
+                        <p>45% Completo</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3>Ingresos del día</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 15%"></div>
+                        </div>
+                        <p>15% Completo</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3></h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 50%"></div>
+                        </div>
+                        <p>50% Completo</p>
+                    </div>
+                </div>
+            </div>
+    
+          
+            <div class="right-sidebar">
+                <div class="header">
+                    <h2>Herramientas</h2>
+                    <a href="#">Ver todo</a>
+                </div>
+                <div class="friends-list">
+                    <div class="friend-item">
+                        <div class="friend-avatar"></div>
+                        <div>
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="map-container">
+              
+                    <div style="text-align: center; padding-top: 80px;"></div>
+                </div>
+            </div>
+        </div>
+    
+    <script>
+    
+    document.querySelectorAll('.sidebar-icon').forEach(icon => {
+        icon.addEventListener('mouseover', () => {
+            icon.style.background = 'rgba(255, 255, 255, 0.2)';
+        });
+        icon.addEventListener('mouseout', () => {
+            icon.style.background = 'rgba(255, 255, 255, 0.1)';
+        });
+    });
+    
+   
+    setInterval(() => {
+        const randomValue = Math.floor(Math.random() * 1000);
+        document.querySelector('.stats-grid .stat-card:first-child h3').textContent = `${randomValue} Hr`;
+    }, 5000);
+    
+
+    const searchBar = document.querySelector('.search-bar');
+    searchBar.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+     
+        console.log('Searching for:', searchTerm);
+    });
+    
+   
+    function updateGraph() {
+        const path = document.querySelector('.graph-line');
+        const newPath = `M0,50 
+                         Q${Math.random() * 25 + 25},${Math.random() * 30 + 20} 
+                         ${50},${Math.random() * 30 + 35}
+                         T${100},${Math.random() * 30 + 35}`;
+        path.setAttribute('d', newPath);
+    }
+    
+   
+    setInterval(updateGraph, 3000);
+    </script>
+    
+    </body>
+    </html>
