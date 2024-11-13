@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-left: 100px; /* Ajusta este valor para mover más a la derecha */
+}
+.table-container {
+    height: 200px;
+    overflow-y: scroll;
+}
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+    
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,522 @@
+:root {
+    --primary-color: #2c7be5;
+    --sidebar-width: 250px;
+}
+
+body {
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+.dashboard {
+    background: white;
+    border-radius: 24px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 80px 1fr 300px;
+    gap: 20px;
+    margin: 0 auto;
+    min-height: 600px;
+    /*max-width: 1200px;*/
+}
+.sidebar {
+    background: #6b4de6;
+    border-radius: 16px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.stats-container {
+    background: #6b4de6;
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    margin-right: 600px;
+    height: 400px;
+}
+
+
+
+.stats-header  {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stats-header select {
+    border-radius: 8px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.graph {
+    height: 150px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-link {
+    color: #6e84a3;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+    background-color: #edf2f9;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5%;
+    padding: 20px;
+    box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, .03);
+    flex: 1;
+}
+
+.card h6 {
+    color: #95aac9;
+    margin: 0 0 10px 0;
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+}
+
+.card .small {
+    font-size: 0.8em;
+}
+
+.success {
+    color: #00d97e;
+}
+
+.danger {
+    color: #e63757;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+
+.badge-success {
+    background-color: #00d97e;
+    color: white;
+}
+
+.badge-warning {
+    background-color: #f6c343;
+    color: white;
+}
+
+.badge-danger {
+    background-color: #e63757;
+    color: white;
+}
+
+.card-P {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    position: relative;
+    top: -125px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px solid #e3ebf6;
+}
+
+/*TARGETA NUEVA*/
+.card-prueba {
+    background-color: white;
+    border-radius: 5%;
+    padding: 20px;
+    box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, .03);
+    flex: 1;
+    position: relative;
+    top: 300px;
+    width: 250px;
+    margin-left: auto;
+}
+
+.card-header-prueba {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-body-prueba {
+    font-size: 14px;
+}
+
+/*TARGETA DE ESTADISTICA*/
+.card-stad {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, .03);
+    width: 600px;
+    /* Cambiar el tamaño de la tarjeta */
+    margin-left: auto;
+    flex: left;
+    /* Centrando la tarjeta horizontalmente */
+}
+
+.col-lg-8 {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-right: 1020px;
+}
+
+.card-body {
+    padding: 0;
+}
+
+#salesChart {
+    width: 80%;
+    height: 80%;
+}
+.table-container{
+    background: #6b4de6;
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    margin-right: 600px;
+    height: 400px;
+    align-items: r;
+}
+/*tabla que muestra pedidos pendientes*/
+.table-container-v {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    left: 1070px;
+}
+
+/*Tabla que llama a todos los proveedores*/
+.table-container-p {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    left: 870px;
+    top: 57px;
+    height: 450px;
+    width: 754px;
+}
+
+/*tabla ventas*/
+/* Table Container */
+/* Estilo para el contenedor de la tabla de ventas */
+.table-container-ve {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+    height: 400px; 
+    margin: 20px 0; 
+}
+
+/* Estilos para la tabla dentro del contenedor */
+.table-container-ve table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilos para los encabezados y celdas de la tabla */
+.table-container-ve th,
+.table-container-ve td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #e3ebf6;
+}
+
+/* Encabezado de la tabla */
+.table-container-ve th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*  colores de filas */
+.table-container-ve tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.table-container-ve tr:hover {
+    background-color: #e8f4ff;
+}
+
+/* Formulario dentro de .form-container-ve */
+.form-container-ve {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-container-p {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 800px;
+    position: relative;
+    top: -390px;
+}
+
+.small-form-input {
+    width: 120px; 
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 12 12'%3E%3Cpath d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 30px;
+}
+
+.button-group {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.button-cancel {
+    background-color: #f2f2f2;
+    color: #333;
+    margin-right: 10px;
+}
+
+.button-submit {
+    background-color: #4CAF50;
+    color: white;
+}
+/* Centrar el modal horizontal y verticalmente en la página */
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+.modal-content {
+    border-radius: 0.5rem;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-dialog {
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    max-width: 600px;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.3rem;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    padding: 1rem;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.btn-close,
+.btn-close-text {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn-close-text {
+    font-size: 1rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    flex: 1;
+    min-width: 220px;
+}
+
+.card-stad {
+    margin-top: 20px;
+}
+
+.card-P {
+    margin-top: 20px;
+}
+
+.table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+
+
