@@ -1,0 +1,936 @@
+:root {
+    --primary-color: #2c7be5;
+    --sidebar-width: 250px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fbfd;
+    display: flex;
+}
+
+.sidebar {
+     
+        background: white;
+        padding: 20px;
+        border-right: 1px solid #eee;
+    
+}
+
+.menu-item {
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #64748b;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-item:hover {
+    background: #f8fafc;
+    color: #6366f1;
+}
+
+.menu-item.active {
+    background: #6366f1;
+    color: white;
+}
+
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-link {
+    color: #6e84a3;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+    background-color: #edf2f9;
+}
+
+.header {
+    background: #6366f1;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%; /* Ajusta el ancho al 80% del contenedor padre */
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5%;
+    padding: 20px;
+    box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, .03);
+    flex: 1;
+}
+
+.card h6 {
+    color: #95aac9;
+    margin: 0 0 10px 0;
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+}
+
+.card .small {
+    font-size: 0.8em;
+}
+
+.success {
+    color: #00d97e;
+}
+
+.danger {
+    color: #e63757;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+
+.badge-success {
+    background-color: #00d97e;
+    color: white;
+}
+
+.badge-warning {
+    background-color: #f6c343;
+    color: white;
+}
+
+.badge-danger {
+    background-color: #e63757;
+    color: white;
+}
+
+.card-P {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    position: relative;
+    top: -125px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 5px;
+    border-bottom: 1px solid #e3ebf6;
+}
+
+/*TARGETA NUEVA*/
+.card-prueba {
+    background-color: white;
+    border-radius: 5%;
+    padding: 20px;
+    box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, .03);
+    flex: 1;
+    position: relative;
+    top: 300px;
+    width: 250px;
+    margin-left: auto;
+}
+
+.card-header-prueba {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-body-prueba {
+    font-size: 14px;
+}
+
+/*TARGETA DE ESTADISTICA*/
+.card-stad {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, .03);
+    width: 600px;
+    /* Cambiar el tamaño de la tarjeta */
+    margin-left: auto;
+    flex: left;
+    /* Centrando la tarjeta horizontalmente */
+}
+
+.col-lg-8 {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-right: 1020px;
+}
+
+.card-body {
+    padding: 0;
+}
+
+#salesChart {
+    width: 80%;
+    height: 80%;
+}
+
+/*tabla que muestra pedidos pendientes*/
+.table-container-v {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    left: 1070px;
+}
+
+/*Tabla que llama a todos los proveedores*/
+.table-container-p {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 100%;
+    margin-top:-150px; /* Espacio entre esta tarjeta y la tarjeta superior */
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: 20%;
+}
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f8f9fa;
+    color: #333;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+.actions {
+    display: flex;
+    gap: 8px;
+}
+.action-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.edit-btn {
+    background-color: #ffc107;
+    color: #000;
+}
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.pagination button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: rgb(127, 245, 103);
+    cursor: pointer;
+    border-radius: 4px;
+}
+.pagination button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+/*tabla ventas*/
+/* Table Container */
+/* Estilo para el contenedor de la tabla de ventas */
+.table-container-ve {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    height: 400px; /* Ajusta la altura fija según sea necesario */
+    margin: 20px 0; /* Opcional: agrega margen superior e inferior para espacio */
+}
+
+/* Estilos para la tabla dentro del contenedor */
+.table-container-ve table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilos para los encabezados y celdas de la tabla */
+.table-container-ve th,
+.table-container-ve td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #e3ebf6;
+}
+
+/* Encabezado de la tabla */
+.table-container-ve th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Alternar colores de filas */
+.table-container-ve tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.table-container-ve tr:hover {
+    background-color: #e8f4ff;
+}
+
+/* Formulario dentro de .form-container-ve */
+.form-container-ve {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-container-p {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    position: relative;
+    width: 60%;
+}
+
+.small-form-input {
+    width: 120px; /* Ajusta el valor según sea necesario */
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;  /* O cualquier tamaño fijo que prefieras */
+    position: absolute;  /* Posiciona el elemento en relación al contenedor más cercano con 'position: relative' */
+    right: 0;  /* Alinea la tarjeta al lado derecho */
+    top: 0;    /* Alinea la tarjeta a la parte superior */
+}
+
+.wrapper {
+    display: flex; /* Flexbox para alinearlos horizontalmente */
+    justify-content: flex-start; /* Alinea los elementos al principio */
+    gap: 20px; /* Espacio entre el formulario y la tarjeta */
+    margin-top: 20px; /* Añade un margen superior si lo necesitas */
+}
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: wrap;   /* Permite que los elementos se ajusten al tamaño disponible */
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 10px;
+    min-width: 150px;  /* Evita que los elementos se encojan demasiado */
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+input[type="text"],
+input[type="email"], /* Añadido tipo email */
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 12 12'%3E%3Cpath d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    padding-right: 30px;
+}
+
+.button-group {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.button-cancel {
+    background-color: #f2f2f2;
+    color: #333;
+    margin-right: 10px;
+}
+
+.button-submit {
+    background-color: #4CAF50;
+    color: white;
+}
+/* Centrar el modal horizontal y verticalmente en la página */
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+.modal-content {
+    border-radius: 0.5rem;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-dialog {
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    max-width: 600px;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.3rem;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    padding: 1rem;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.btn-close,
+.btn-close-text {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn-close-text {
+    font-size: 1rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    flex: 1;
+    min-width: 220px;
+}
+
+.card-stad {
+    margin-top: 20px;
+}
+
+.card-P {
+    margin-top: 20px;
+}
+
+.table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Estilos para los botones de acción */
+.action-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.delete {
+    background-color: red;
+    color: white;
+}
+
+.edit {
+    background-color: orange;
+    color: white;
+}
+
+.delete:hover {
+    background-color: darkred;
+}
+
+.edit:hover {
+    background-color: darkorange;
+}
+
+
+
+/* Contenedor principal para organizar los elementos */
+.header-container {
+    display: flex;           /* Se alinea horizontalmente los elementos */
+    gap: 20px;               /* Espacio entre el formulario y la tarjeta */
+    align-items: flex-start; /* Alineación superior para ambos elementos */
+    justify-content: flex-start; /* Alineación a la izquierda */
+    width: 100%;             /* Asegura que el contenedor ocupe todo el ancho */
+}
+
+/* Estilo del formulario */
+.form-container-proveedor {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 60%;              /* Ancho del formulario */
+    min-width: 400px;        /* Ancho mínimo */
+    height: auto;            /* La altura se ajustará automáticamente según el contenido */
+    display: flex;           /* Usar flexbox para que los elementos dentro se ajusten */
+    flex-direction: column;  /* Los elementos se apilan verticalmente */
+    justify-content: flex-start;  /* Alineación de los elementos desde el inicio */
+}
+
+
+/* Estilo de la tarjeta */
+.card-2 {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 170px;
+    width: 40%;          /* Ancho de la tarjeta, puedes ajustar según sea necesario */
+    /* Si deseas más flexibilidad, puedes usar `flex` en lugar de un ancho fijo */
+}
+
+
+
+
+
+
+.sidebar {
+    background: white;
+    padding: 20px;
+    border-right: 1px solid #eee;
+}
+
+.logo {
+    font-size: 24px;
+    color: #6366f1;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #64748b;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-item:hover {
+    background: #f8fafc;
+    color: #6366f1;
+}
+
+.menu-item.active {
+    background: #6366f1;
+    color: white;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+
+.welcome-card {
+    background: linear-gradient(to right,#3EA4F1,#6366f1);
+    font-size: 14px;
+    color: white;
+    letter-spacing: 0.5px;
+    line-height: 21px;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 40%;
+    position: relative; /* Necesario para posicionar la imagen dentro de este contenedor */
+}
+
+
+/* Contenedor que organiza la tarjeta y el formulario */
+.container-flex {
+    display: flex;          /* Hacemos que los elementos se alineen horizontalmente */
+    gap: 20px;              /* Espacio entre los elementos */
+    align-items: flex-start; /* Alineación superior de los elementos */
+    justify-content: flex-start; /* Alineación a la izquierda */
+    width: 100%;            /* Ancho completo */
+    flex-wrap: wrap;        /* Para que los elementos se ajusten cuando haya poco espacio */
+}
+
+
+/* Estilo de la tarjeta de bienvenida */
+.welcome-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 40%;             /* El 40% de ancho para la tarjeta */
+    min-width: 300px;       /* Ancho mínimo de la tarjeta */
+}
+
+/* Estilo del formulario */
+
+.form-container-producto {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 58%;             /* El formulario ocupará el 50% del contenedor */
+         /* Ancho mínimo para el formulario */
+}
+/* Estilos adicionales para el formulario */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 45%;   /* Cada grupo de campo toma un 45% del ancho disponible */
+}
+
+button {
+    background: white;
+    color: #6366f1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Aseguramos que las imágenes dentro de .welcome-card no se desborden */
+.card-image {
+    width: 100%; /* O el tamaño que prefieras */
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.welcome-card img {
+    position: absolute; /* Fija la imagen dentro de la tarjeta */
+    bottom: -55px; /* Ajusta la distancia desde la parte inferior */
+    right: -25px; /* Ajusta la distancia desde el borde derecho */
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    height: 300px; /* Ajusta el tamaño según sea necesario */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+}
+
+
+.welcome-card h3 {
+    font-size: 3rem; /* Tamaño del texto */
+    color: #c1ff72;  /* Color base del texto (puedes cambiarlo si prefieres otro color) */
+    font-weight: bold; /* Texto en negrita para más énfasis */
+    text-align: center; /* Centrado de texto */
+    
+    /* Efecto de resplandor pero sin que el texto se vea borroso */
+    text-shadow: 
+        0 0 5px #c2ff724d,   /* Resplandor pequeño */
+        0 0 10px #ffffff09,  /* Resplandor mediano */
+        0 0 15px #c2ff7217,  /* Resplandor grande */
+        0 0 20px #c2ff7249,  /* Resplandor muy grande */
+        0 0 5px #ffffff00;  /* Resplandor máximo */
+    
+}
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 110px); /* Cambié el 1fr por 250px para un tamaño fijo */
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: left; /* Opcional, para centrar las tarjetas */
+    position: relative;
+    top: -380px;
+    margin-right: 900px;  
+}
+
+.card-item {
+   aspect-ratio: 1;
+    border-radius: 15px;
+    display: flex;
+    align-items: rigth;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-item:nth-child(1) {
+    background: #98FB98;
+}
+
+.card-item:nth-child(2) {
+    background: #FF6B6B;
+}
+
+.card-item:nth-child(3) {
+    background: #DDA0DD;
+}
+
+.card-item:hover {
+    transform: scale(1.05);
+}
+
+
+.error-message {
+    background-color: #ffdddd;
+    color: #d8000c;
+    padding: 15px;
+    margin: 20px auto;
+    border: 1px solid #d8000c;
+    border-radius: 8px;
+    width: 50%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+   /*PROVEEDOR  */
+
+.form-container-proveedor {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px; /* Asegúrate de que ocupe el 100% del contenedor */
+    max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    max-height: 400px; /* Ajusta la altura máxima según sea necesario */
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede la altura */
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si es necesario */
+    justify-content: space-between; /* Espacio entre los elementos */
+}
+
+.form-group {
+    flex: 1 1 45%; /* Cada grupo de formulario toma el 45% del ancho disponible */
+    margin-right: 10px; /* Espacio entre grupos */
+}
+
+.form-group:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último grupo */
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%; /* Asegúrate de que los campos de entrada ocupen el 100% */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+
+
+.table-container-p {
+    margin-top: -130px; /* Espacio entre la tabla y las tarjetas */
+    background-color: #ffffff; /* Fondo de la tabla */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+
+.btn-danger {
+    background-color: #dc3545; /* Cambia este valor al color que desees */
+    color: white; /* Cambia el color del texto si es necesario */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Cambia el color al pasar el mouse */
+}

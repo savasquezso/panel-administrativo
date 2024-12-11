@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        .error-message {
+            background-color: #f8d7da; /* Color de fondo */
+            color: #721c24; /* Color del texto */
+            border: 1px solid #f5c6cb; /* Borde */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 15px; /* Espaciado interno */
+            margin: 20px 0; /* Margen superior e inferior */
+            display: none; /* Ocultar por defecto */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Iniciar sesión</h2>
+        
+        <!-- Contenedor para el mensaje de error -->
+        <div class="error-message" id="error-message"></div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="remember-forgot">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Recordar contraseña</label>
+                </div>
+            </div>
+            
+            <button type="submit" class="sign-in-button">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+
+            // Obtiene los datos del formulario
+            var usuario = document.getElementById('usuario').value;
+            var password = document.getElementById('password').value;
+
+            // Crea una solicitud AJAX
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'login.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            // Maneja la respuesta
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        // Redirige a la página principal si el login es exitoso
+                        window.location.href = response.redirect;
+                    } else {
+                        // Muestra el mensaje de error
+                        document.getElementById('error-message').innerText = response.message;
+                        document.getElementById('error-message').style.display = 'block';
+                    }
+                }
+            };
+
+            // Envía la solicitud con los datos del formulario
+            xhr.send('usuario=' + encodeURIComponent(usuario) + '&password=' + encodeURIComponent(password));
+        });
+    </script>
+</body>
+</html>

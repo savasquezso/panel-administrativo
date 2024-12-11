@@ -1,0 +1,54 @@
+<?php
+include 'db_connection.php';
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "fruver_db";
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+if (isset($_POST['actualizar_stock'])) {
+    $id = $_POST['id'];
+    $nombre = $_POST['nombre'];
+    $valor_unidad = $_POST['valor_unidad'];
+    $cantidad = $_POST['cantidad'];
+    $valor_libra = $_POST['valor_libra'];
+    $categoria = $_POST['categoria'];
+    $proveedor = $_POST['proveedor'];
+
+    if (preg_match("/^[A-Za-z\s]+$/", $nombre)) {
+        $sql_actualizar = "UPDATE stock SET nombre=?, valor_unidad=?, cantidad=?, valor_libra=?, categoria=?, proveedor=? WHERE id=?";
+        $stmt = $conn->prepare($sql_actualizar);
+        $stmt->bind_param("sdidsis", $nombre, $valor_unidad, $cantidad, $valor_libra, $categoria, $proveedor, $id);
+
+        if ($stmt->execute()) {
+            echo "<p style='color: green;'>Producto actualizado con éxito.</p>";
+        } else {
+            echo "<p style='color: red;'>Error al actualizar el producto: " . $conn->error . "</p>";
+        }
+    }
+}
+
+if (isset($_POST['eliminar_stock'])) {
+    $id_eliminar = $_POST['id'];
+    $sql_eliminar = "DELETE FROM stock WHERE id = ?";
+    $stmt = $conn->prepare($sql_eliminar);
+    $stmt->bind_param("i", $id_eliminar);
+
+    if ($stmt->execute()) {
+        echo "<p style='color: green;'>Producto eliminado con éxito.</p>";
+    } else {
+        echo "<p style='color: red;'>Error al eliminar el producto: " . $conn->error . "</p>";
+    }
+}
+
+$sql = "SELECT id, nombre, valor_unidad, cantidad, valor_libra, categoria, proveedor FROM stock";
+$result = $conn->query($sql);
+
+
+
+?>
